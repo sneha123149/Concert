@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="shortcut icon" href="https://cdn3.vectorstock.com/i/1000x1000/95/87/letter-s-luxury-logo-with-crown-symbol-vector-47899587.jpg" type="image/x-icon">
+    
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url("background.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: white;
+        min-height: 100vh;
+      }
+
+      .header {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 20px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+      }
+
+      .header a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 16px;
+      }
+
+      .header select {
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        padding: 5px 10px;
+        font-size: 14px;
+      }
+
+      #car {
+        margin-top: 80px;
+      }
+
+      .carousel-item img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+      }
+
+      .container.my-5 {
+        margin-top: 0 !important;
+        padding-top: 0;
+      }
+
+      h6 {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 24pt;
+        color: #333;
+      }
+
+      p {
+        text-align: center;
+        font-size: 16pt;
+        color: black;
+        margin: 20px auto;
+        max-width: 800px;
+      }
+
+      #h8 {
+        text-align: center;
+        font-size: 16pt;
+        color: rgba(0, 0, 0, 0.877);
+        margin: 20px auto;
+        max-width: 800px;
+      }
+
+      .name {
+        display: flex;
+        justify-content: center;
+        padding: 40px 30px;
+        background-color: rgba(248, 249, 250, 0.9);
+        color: black;
+      }
+
+      .name-card {
+        flex: 1;
+        max-width: 300px;
+        background: white;
+        margin: 0 10px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .name-card img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 10px;
+      }
+
+      .name-card h7 {
+        margin: 10px 0;
+        font-size: 18px;
+        color: #333;
+      }
+
+      .card-img-top {
+        height: 250px;
+        object-fit: cover;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      .blog-section {
+        background: url("map.jpg") no-repeat center center/cover;
+        color: white;
+        min-height: 100vh;
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+      .blog-section .nav-tabs .nav-link {
+        color: white;
+        border: none;
+      }
+
+      .blog-section .nav-tabs .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+      }
+
+      .footer {
+        background-color: #111;
+        color: #ccc;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      .footer a {
+        color: #ccc;
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        color: #fff;
+      }
+      label{
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="logo">
+        <h1>Rhythms of the Gangs</h1>
+      </div>
+      <div class="nav">
+        <a href="#car"> <i class="fa fa-home"></i> HOME</a>
+        <a href="#brand"><i class="fa-brands fa-bandcamp"></i> BRAND</a>
+        <a href="#tour"><i class="fa-solid fa-car"></i> TOUR</a>
+        <a href="#contact"><i class="fa-solid fa-phone"></i> CONTACT</a>
+      
+      </div>
+    </div>
+
+    <div class="container-fluid p-0">
+      <div id="car" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#car"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#car"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#car"
+            data-bs-slide-to="2"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="p9.jpg" class="d-block w-100" />
+            <div class="carousel-caption d-none d-md-block" data-aos="fade-up">
+              <h5>New York</h5>
+              <h8>We had such a great time in NY!</h8>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="p6.jpg" class="d-block w-100" />
+            <div class="carousel-caption d-none d-md-block" data-aos="fade-up">
+              <h5>Chicago</h5>
+              <h8>We had such a great time in Chicago!</h8>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="p5.jpg" class="d-block w-100" />
+            <div class="carousel-caption d-none d-md-block" data-aos="fade-up">
+              <h5>Los Angeles</h5>
+              <h8>We had such a great time in LA!</h8>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#car"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#car"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <div id="brand" class="container my-5" data-aos="fade-right">
+      <h6>
+        <b><u>The Brand</u></b>
+      </h6>
+      <p>
+        Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
+        consectetur, adipisicing elit. Aliquid quae atque dolor voluptatem, ipsa
+        iste totam cumque nisi blanditiis corrupti labore explicabo consectetur
+        tenetur eum rerum iusto vero, ad magni ullam quisquam amet. In soluta
+        molestias repellendus saepe facere, dolores animi vel maiores vero quasi
+        nisi quis eaque assumenda tenetur perspiciatis explicabo provident aut
+        possimus hic, exercitationem quos obcaecati error quisquam? Temporibus
+        deserunt natus molestiae culpa cupiditate expedita, error, minima illo
+        consectetur harum beatae dicta at debitis labore repudiandae ad amet
+        dolorem. Laboriosam totam, excepturi eveniet sed dicta debitis odio,
+        sunt repellendus ratione esse omnis perspiciatis inventore magnam neque
+        suscipit!
+      </p>
+
+      <div class="name">
+        <div class="name-card" data-aos="zoom-in">
+          <img src="p10.jpg" alt="Name 1" />
+          <h7>Name 1</h7>
+        </div>
+        <div class="name-card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="p11.jpg" alt="Name 2" />
+          <h7>Name 2</h7>
+        </div>
+        <div class="name-card" data-aos="zoom-in" data-aos-delay="400">
+          <img src="p12.jpg" alt="Name 3" />
+          <h7>Name 3</h7>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="tour"
+      class="container my-5 text-center text-white"
+      style="background-color: black; padding: 40px 20px; border-radius: 10px"
+      data-aos="fade-up"
+    >
+      <h2 class="fw-bold">TOUR DATES</h2>
+      <h8
+        ><em
+          >Lorem ipsum we'll play you some music.<br />Remember to book your
+          tickets!</em
+        ></h8
+      >
+      <div class="table-responsive">
+        <table class="table text-white mb-0">
+          <tbody>
+            <tr>
+              <td><strong>September</strong></td>
+              <td class="text-end">
+                <span class="badge bg-danger">Sold-out</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>October</strong></td>
+              <td class="text-end">
+                <span class="badge bg-danger">Sold-out</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>November</strong></td>
+              <td class="text-end">
+                <span class="badge bg-danger">Sold-out</span>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>December</strong></td>
+              <td class="text-end">
+                <span class="badge bg-success">Available (50 tickets)</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="container my-5">
+      <div class="row justify-content-center" data-aos="fade-up">
+        <!-- Paris -->
+        <div class="col-md-4 mb-4">
+          <div class="card text-center">
+            <img src="paris.jpg" class="card-img-top" />
+            <div class="card-body">
+              <h6>Paris</h6>
+              <p class="fw-bold">Sunday 29 November 2015</p>
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-toggle="modal"
+                data-bs-target="#mod"
+              >
+                Buy Ticket
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card text-center">
+            <img src="new.jpg" class="card-img-top" />
+            <div class="card-body">
+              <h6>New York</h6>
+              <p class="fw-bold">Sunday 29 November 2015</p>
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-toggle="modal"
+                data-bs-target="#mod"
+              >
+                Buy Ticket
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card text-center">
+            <img src="san.jpg" class="card-img-top" />
+            <div class="card-body">
+              <h6>San Francisco</h6>
+              <p class="fw-bold">Sunday 29 November 2015</p>
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-toggle="modal"
+                data-bs-target="#mod"
+              >
+                Buy Ticket
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal start -->
+    <div class="modal fade" id="mod">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h9 class="modal-title text-black">Registration</h9>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="#car">
+              <div class="row mb-3">
+                <div class="col">
+                    <label>Tickets, $23 per person</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="How many"
+                    required
+                  />
+                </div>
+                <div class="col">
+                  <label>Send to</label><input
+                    type="email"
+                    class="form-control"
+                    placeholder="Enter E-mail"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="text-end">
+                <button type="submit" class="btn btn-dark px-4">Pay</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal end -->
+    <div
+      id="contact"
+      class="container py-5"
+      style="background-color: #f8f9fa"
+      data-aos="fade-right"
+    >
+      <h2 class="text-center fw-bold text-black">Contact</h2>
+      <p class="text-center fst-italic text-secondary">We love our fans!</p>
+      <div class="row mt-4">
+        <div class="col-md-5 text-center text-md-start mb-4 mb-md-0">
+          <p class="fw-semibold fst-italic">Fan? Drop a note</p>
+          <p class="fst-italic">Sarat Sadan, West Bengal, India</p>
+          <p class="fst-italic">Phone! 000 1234567899</p>
+          <p class="fst-italic">Email! mail@mail.com</p>
+        </div>
+        <div class="col-md-7">
+          <form action="#car">
+            <div class="row mb-3">
+              <div class="col">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter email"
+                  required
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Enter password"
+                  required
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="comments" class="form-label text-black"
+                >Comments:</label
+              ><textarea
+                class="form-control"
+                id="comments"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <div class="text-end">
+              <button type="submit" class="btn btn-dark px-4">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container py-5"
+      style="background-color: #f8f9fa"
+      data-aos="zoom-in"
+    >
+      <h2 class="text-center fw-bold mb-4 text-black">Our Customers</h2>
+      <ul
+        class="nav nav-tabs justify-content-center"
+        id="blogTabs"
+        role="tablist"
+      >
+        <li class="nav-item">
+          <button
+            class="nav-link active"
+            data-bs-toggle="tab"
+            data-bs-target="#brand-a"
+          >
+            Sneha Dutta
+          </button>
+        </li>
+        <li class="nav-item">
+          <button
+            class="nav-link"
+            data-bs-toggle="tab"
+            data-bs-target="#brand-b"
+          >
+            Ankita Chakraborty
+          </button>
+        </li>
+        <li class="nav-item">
+          <button
+            class="nav-link"
+            data-bs-toggle="tab"
+            data-bs-target="#brand-c"
+          >
+           Atrick Paul
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content py-4 px-md-5 text-center">
+        <div class="tab-pane fade show active" id="brand-a">
+          <h3 class="fw-semibold text-secondary"><i>"Awesome"</i></h3>
+          <p class="text-muted">
+            <small><i>The recent concert at was absolutely electric! From the opening chords to the final encore, the energy was palpable, and the performance was truly captivating. The band's musicianship was stellar, and the stage presence was undeniable." </i></small>
+          </p>
+        </div>
+        <div class="tab-pane fade" id="brand-b">
+          <h3 class="fw-semibold text-secondary">"Highly recommended"</h3>
+          <p class="text-muted">
+            <small><i>Absolutely unforgettable! The energy in the venue was electric, and they delivered a truly captivating performance. From the opening notes to the final encore, I was completely swept away. The sound quality was superb, and the lighting created a magical atmosphere. Highly recommend this concert and this venue!</i></small>
+          </p>
+        </div>
+        <div class="tab-pane fade" id="brand-c">
+          <h3 class="fw-semibold text-secondary">"Fantastic"</h3>
+          <p class="text-muted">
+            <small><i>The band's energy was infectious, and their performance was absolutely electrifying! The music was powerful and the stage presence was amazing. I've never seen anything like it!</i></small>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="container-fluid blog-section text-center"
+      data-aos="fade-up"
+    ></div>
+
+    <footer class="footer">
+      <div class="container">
+        <h8>© 2025 Your Company. All rights reserved.</h8>
+      </div>
+    </footer>
+
+    <script>
+      AOS.init({ duration: 1000 });
+    </script>
+  </body>
+</html>
